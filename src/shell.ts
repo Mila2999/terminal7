@@ -336,7 +336,7 @@ export class Shell {
         this.printPrompt()
     }
 
-    startHourglass({ timeout, prefix = 'Waiting' } : { timeout: number; prefix?: string } ) {
+    startHourglass({ timeout, prefix = 'Waiting' } : { timeout?: number; prefix?: string } ) {
         if (this.timer) return
         this.map.showLog(true)
         const len = 20,
